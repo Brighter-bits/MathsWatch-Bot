@@ -81,7 +81,7 @@ def CoordsQ1():
 def CoordsQ4():
     #Firstly the variable is made global so that GettoPage() knows which topic to enter later
     global i
-    #A grace peruid for the website to fully load
+    #A grace period for the website to fully load
     time.sleep(delay)
     try:
         #Choose the first answer box and enter the answer
@@ -100,6 +100,9 @@ def CoordsQ4():
         #Click on the next question
         #The li[number] will increase each question. During the harder questions, the div before li[number] changes from 3 to 1 and the li will reset to 3
         actions.click(water).perform()
+
+        #As you may be able to see, most of this has been replaced by L.divinput from the Layouts file.
+        #I am leaving the code above as an example anyway
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/input')
         actions.send_keys_to_element(water, "(5, -1)").perform()
@@ -4111,15 +4114,18 @@ def UTime():
     global i
     time.sleep(delay)
     try:
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div/div/subtag/div/formgroup/div/div/div/div/div[1]')
-        actions.send_keys_to_element(water, "09:00")
+        L.SymSingleLongBox("09:00", "L4")
+        L.SymSingleLongBox("05:35", "L5")
+        L.SymSingleLongBox("20:00", "L6")
+        L.SymSingleLongBox("19:55", "L7")
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/input')
+        actions.send_keys_to_element(water, "A").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
         actions.click(water).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[3]/a')
         actions.click(water).perform()
-        L.SymSingleLongBox("05:35", "L5")
 
         
     except:
