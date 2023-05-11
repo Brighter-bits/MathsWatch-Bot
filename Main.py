@@ -5,10 +5,10 @@ from Driver import By
 from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
-#The current set of questions being worked on is 56
-i=56
+#The current set of questions being worked on is 57
+i=57
 driver.maximize_window()
-delay = 1
+delay = 2
 
 def GettoPage():
     #This takes the user to the My Progress page and is indented to enter each task once the previous one has been finished
@@ -4107,6 +4107,26 @@ def UnitsLMC():
         i+=1
         GettoPage()
 
+def UTime():
+    global i
+    time.sleep(delay)
+    try:
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "9  :  00")
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        actions.click(water).perform()
+        L.SymSingleLongBox("5  :  35", "L5")
+        
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
 
 GettoPage()
 # CoordsQ1()
@@ -4165,5 +4185,6 @@ GettoPage()
 # SubIntWrit()
 # MultEz()
 # DivEz()
-UnitsLMC()
+# UnitsLMC()
+UTime()
 time.sleep(100000)
