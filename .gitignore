@@ -1,5 +1,3 @@
 *.pyc
-src\Driver.py
-Driver.py
 src/Driver.py
 Cookie.py
