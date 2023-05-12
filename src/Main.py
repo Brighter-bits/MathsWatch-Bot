@@ -6,7 +6,7 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 57
-i=57
+i=1
 driver.maximize_window()
 delay = 2
 
@@ -45,32 +45,9 @@ def CoordsQ1():
     time.sleep(delay)
     #For an explanation of each code byte go to Coords Q4
     try:
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/input')
-        actions.send_keys_to_element(water, "(2, 8)").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div/input')
-        actions.send_keys_to_element(water, "(6,3)").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
-        actions.click(water).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
-        actions.click(water).perform()
-
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/input')
-        actions.send_keys_to_element(water, "(0, 7)").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div/input')
-        actions.send_keys_to_element(water, "(9, 0)").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
-        actions.click(water).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[5]/a')
-        actions.click(water).perform()
-
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/input')
-        actions.send_keys_to_element(water, "(7.5, 3)").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div/input')
-        actions.send_keys_to_element(water, "(3.5,6.5)").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
-        actions.click(water).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[3]/a')
-        actions.click(water).perform()
+        L.divinput("L4", "(2, 8)", "(6, 3)")
+        L.divinput("L5", "(0, 7)", "(9, 0)")
+        L.divinput(0,"(7.5, 3)", "(3.5,6.5)")
     except:
         print("3rr0r", i)
     finally:
