@@ -23,7 +23,7 @@ def SymSingleLongBox(answer, next=0):
             num2 = 3
         else:
             num2 = 1
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2)+']/ul/li['+num+']/a')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2-2)+']/ul/li['+(num-2)+']/a')
         actions.click(water).perform()
 
 def NormSingleLongBox(answer, next=0):
@@ -48,10 +48,10 @@ def NormSingleLongBox(answer, next=0):
             num2 = 3
         else:
             num2 = 1
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2)+']/ul/li['+num+']/a')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2-2)+']/ul/li['+(num-2)+']/a')
         actions.click(water).perform()
 
-def divinput(next = 0, first = "kumquats", second = "kumquats", third = "kumquats", fourth = "kumquats"):
+def divinput(first = "kumquats", next = 0, second = "kumquats", third = "kumquats", fourth = "kumquats"):
     """
     This is a function to quickly answer questions in the white area (directly next to the question)
     
@@ -83,5 +83,5 @@ def divinput(next = 0, first = "kumquats", second = "kumquats", third = "kumquat
             num2 = 3
         else:
             num2 = 1
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2)+']/ul/li['+num+']/a')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2-2)+']/ul/li['+(num-2)+']/a')
         actions.click(water).perform()
