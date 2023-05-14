@@ -6,7 +6,7 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 58
-i=58
+i=1
 delay = 1
 
 def GettoPage():
@@ -23,7 +23,7 @@ def GettoPage():
     water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/panel[1]/div/div/button[1]')
     actions.move_to_element(water).click().perform()
 
-#Current total points from running all the code
+#Current total points from running all the code as of 14/03/23
 #Primary: 678
 #KS3: 234
 #Total: 912
@@ -3427,64 +3427,63 @@ def UMon():
 
 def Primary():
     GettoPage()
-    # CoordsQ1()
-    # CoordsQ4()
-    # AlgebraicVocab()
-    # FormulaInWords()
-    # AlgebraicNotation()
-    # HIV_Lines()
-    # LikeTerms()
-    # AlgSimMult()
-    # AlgSimDiv()
-    # ExpandingBrackets()
-    # Factorisation()
-    # Substitution()
-    # SeqTtT()
-    # SeqPtS()
-    # findNTerm()
-    # GeometricDef()
-    # CircleProp()
+    CoordsQ1()
+    CoordsQ4()
+    AlgebraicVocab()
+    FormulaInWords()
+    AlgebraicNotation()
+    HIV_Lines()
+    LikeTerms()
+    AlgSimMult()
+    AlgSimDiv()
+    ExpandingBrackets()
+    Factorisation()
+    Substitution()
+    SeqTtT()
+    SeqPtS()
+    findNTerm()
+    GeometricDef()
+    CircleProp()
 
 
 
 
 
 
-    # CountingSquares()
-    # PeriFormula()
-    # CountingAreaSquares()
-    # BeginnerAngles()
+    CountingSquares()
+    PeriFormula()
+    CountingAreaSquares()
+    BeginnerAngles()
 
-    # NotMeasuringAngles()
+    NotMeasuringAngles()
 
-    # Polygons()
-    # TreeDProps()
-    # TreeDModels()
-    # TreeDNets()
-    # AngleFacts()
-    # PropsofQuads()
+    Polygons()
+    TreeDProps()
+    TreeDModels()
+    TreeDNets()
+    AngleFacts()
+    PropsofQuads()
 
-    # SpecialTriangles()
-    # TriAngleCalc()
-    # AnglePara()
-    # PolySums()
-    # RectArea()
-    # ParArea()
-    # TriArea()
-    # TrapArea()
-    # PValueint()
-    # PVDecimals()
-    # PVMeaures()
-    # OrderInt()
-    # OrderDec()
-    # IntMent()
-    # IntWrit()
-    # SubIntMent()
-    # SubIntWrit()
-    # MultEz()
-    # DivEz()
-    # UnitsLMC()
-    # UTime()
+    SpecialTriangles()
+    TriAngleCalc()
+    AnglePara()
+    PolySums()
+    RectArea()
+    ParArea()
+    TriArea()
+    TrapArea()
+    PValueint()
+    PVDecimals()
+    PVMeaures()
+    OrderInt()
+    OrderDec()
+    IntMent()
+    IntWrit()
+    SubIntMent()
+    SubIntWrit()
+    MultEz()
+    DivEz()
+    UnitsLMC()
+    UTime()
     UMon()
 Primary()
-time.sleep(100000)
