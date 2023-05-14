@@ -11,6 +11,7 @@ delay = 1
 
 def GettoPage():
     #This takes the user to the My Progress page and is indented to enter each task once the previous one has been finished
+    time.sleep(delay)
     driver.get('https://vle.mathswatch.co.uk/vle/stats/')
     time.sleep(delay)
     water = Select(driver.find_element(by=By.XPATH, value = '/html/body/app/main/div[2]/routehandler/div/panel/div/student-stats/div[2]/div[2]/div/div[1]/div[2]/select'))
@@ -29,9 +30,9 @@ def GettoPage():
 
 #TODO:
     #Finish all/most of the questions
-    #Log in properly with Username and Password
+    #Log in properly with Username and Password ./ COMPLETE!
     #Make a GUI then make it headless
-    #Make it MultiFile to make myself look like a competent programmer
+    #Make it MultiFile to make myself look like a competent programmer ./ Success!
     #Maybe publish it on Github
     #Turn it into an .exe
     #Fix questions which won't submit/other problems
@@ -3420,64 +3421,70 @@ def UMon():
         GettoPage()
 
 
-GettoPage()
-# CoordsQ1()
-# CoordsQ4()
-# AlgebraicVocab()
-# FormulaInWords()
-# AlgebraicNotation()
-# HIV_Lines()
-# LikeTerms()
-# AlgSimMult()
-# AlgSimDiv()
-# ExpandingBrackets()
-# Factorisation()
-# Substitution()
-# SeqTtT()
-# SeqPtS()
-# findNTerm()
-# GeometricDef()
-# CircleProp()
+
+
+
+
+def Primary():
+    GettoPage()
+    # CoordsQ1()
+    # CoordsQ4()
+    # AlgebraicVocab()
+    # FormulaInWords()
+    # AlgebraicNotation()
+    # HIV_Lines()
+    # LikeTerms()
+    # AlgSimMult()
+    # AlgSimDiv()
+    # ExpandingBrackets()
+    # Factorisation()
+    # Substitution()
+    # SeqTtT()
+    # SeqPtS()
+    # findNTerm()
+    # GeometricDef()
+    # CircleProp()
 
 
 
 
 
 
-# CountingSquares()
-# PeriFormula()
-# CountingAreaSquares()
-# BeginnerAngles()
+    # CountingSquares()
+    # PeriFormula()
+    # CountingAreaSquares()
+    # BeginnerAngles()
 
-# NotMeasuringAngles()
+    # NotMeasuringAngles()
 
-# Polygons()
-# TreeDProps()
-# TreeDModels()
-# TreeDNets()
-# AngleFacts()
-# PropsofQuads()
+    # Polygons()
+    # TreeDProps()
+    # TreeDModels()
+    # TreeDNets()
+    # AngleFacts()
+    # PropsofQuads()
 
-# SpecialTriangles()
-# TriAngleCalc()
-# AnglePara()
-# PolySums()
-# RectArea()
-# ParArea()
-# TriArea()
-# TrapArea()
-# PValueint()
-# PVDecimals()
-# PVMeaures()
-# OrderInt()
-# OrderDec()
-# IntMent()
-# IntWrit()
-# SubIntMent()
-# SubIntWrit()
-# MultEz()
-# DivEz()
-# UnitsLMC()
-# UTime()
-UMon()
+    # SpecialTriangles()
+    # TriAngleCalc()
+    # AnglePara()
+    # PolySums()
+    # RectArea()
+    # ParArea()
+    # TriArea()
+    # TrapArea()
+    # PValueint()
+    # PVDecimals()
+    # PVMeaures()
+    # OrderInt()
+    # OrderDec()
+    # IntMent()
+    # IntWrit()
+    # SubIntMent()
+    # SubIntWrit()
+    # MultEz()
+    # DivEz()
+    # UnitsLMC()
+    # UTime()
+    UMon()
+Primary()
 time.sleep(100000)
