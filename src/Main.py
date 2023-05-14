@@ -87,7 +87,7 @@ def CoordsQ4():
         L.divinput2(50, 0, -40)
 
     except:
-        print("3rr0r")
+        print("3rr0r", i)
     finally:
         #Indent i for the GettoPage()
         i += 1
@@ -482,10 +482,40 @@ def ExpandingBrackets():
         L.NormSingleLongBox("12x^2 - 15x", 'H1')
         L.NormSingleLongBox("8x^2 + 6xy", 'H2')
         L.NormSingleLongBox("5p^2 - 15pq", 'H3')
-        L.NormSingleLongBox("11x + 15", 'H4')
-        L.NormSingleLongBox("10x + 7", 'H5')
-        L.NormSingleLongBox("4x - 9", 'H6')
-        L.NormSingleLongBox("6x + 11")
+
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/textarea")
+        actions.send_keys_to_element(water, "11x + 15").perform
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[6]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/textarea")
+        actions.send_keys_to_element(water, "10x + 7").perform
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[7]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/textarea")
+        actions.send_keys_to_element(water, "4x - 9").perform
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[8]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div/textarea")
+        actions.send_keys_to_element(water, "6x + 11").perform
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
 
     except:
         print("3rr0r", i)
@@ -672,7 +702,7 @@ def SeqTtT():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[5]/a')
         actions.click(water).perform()
 
-        L.SymSingleLongBox(12, "L4")
+        L.divinput2(12, "L4")
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
         actions.send_keys_to_element(water, "96").perform()
@@ -975,10 +1005,10 @@ def GeometricDef():
     global i
     time.sleep(delay)
     try:
-        L.SymSingleLongBox("right angles", "L2")
+        L.divinput2("right angles", "L2")
         L.divinput2("meet", "H1")
-        L.SymSingleLongBox("perpendicular", "H2")
-        L.SymSingleLongBox("parallel")
+        L.divinput2("perpendicular", "H2")
+        L.divinput2("parallel")
     except:
         print("3rr0r", i)
     finally:  
@@ -1032,7 +1062,7 @@ def PeriFormula():
     try:
         L.SymSingleLongBox(24, 'L2')
         L.SymSingleLongBox(28, 'L3')
-        L.SymSingleLongBox(49.5, 'H1')
+        L.SymSingleLongBox(49.8, 'H1')
         L.SymSingleLongBox(8, 'H2')
         L.SymSingleLongBox(17.15, 'H3')
         L.SymSingleLongBox(6.5)
@@ -1352,7 +1382,7 @@ def PropsofQuads():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[5]/a')
         actions.click(water).perform()
 
-        L.divinput2("D", "L4", 8, "paralell")
+        L.divinput2("D", "L4", "C", "paralell")
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/div/div/div[1]/div')
         actions.click(water).perform()
@@ -3427,63 +3457,62 @@ def UMon():
 
 def Primary():
     GettoPage()
-    CoordsQ1()
-    CoordsQ4()
-    AlgebraicVocab()
-    FormulaInWords()
-    AlgebraicNotation()
-    HIV_Lines()
-    LikeTerms()
-    AlgSimMult()
-    AlgSimDiv()
-    ExpandingBrackets()
-    Factorisation()
-    Substitution()
-    SeqTtT()
-    SeqPtS()
-    findNTerm()
-    GeometricDef()
-    CircleProp()
+    CoordsQ1()#1
+    CoordsQ4()#2
+    AlgebraicVocab()#3
+    FormulaInWords()#4
+    AlgebraicNotation()#5
+    HIV_Lines()#6
+    LikeTerms()#7
+    AlgSimMult()#8
+    AlgSimDiv()#9
+    ExpandingBrackets()#10
+    Factorisation()#11
+    Substitution()#12
+    SeqTtT()#13
+    SeqPtS()#14
+    findNTerm()#15
+    GeometricDef()#16
+    CircleProp()#17
 
 
 
 
 
 
-    CountingSquares()
-    PeriFormula()
-    CountingAreaSquares()
-    BeginnerAngles()
+    CountingSquares()#24
+    PeriFormula()#25
+    CountingAreaSquares()#26
+    BeginnerAngles()#27
+    NotMeasuringAngles()#28
 
-    NotMeasuringAngles()
+    Polygons()#30
+    TreeDProps()#31
+    TreeDModels()#32
+    TreeDNets()#33
+    AngleFacts()#34
+    PropsofQuads()#35
 
-    Polygons()
-    TreeDProps()
-    TreeDModels()
-    TreeDNets()
-    AngleFacts()
-    PropsofQuads()
-
-    SpecialTriangles()
-    TriAngleCalc()
-    AnglePara()
-    PolySums()
-    RectArea()
-    ParArea()
-    TriArea()
-    TrapArea()
-    PValueint()
-    PVDecimals()
-    PVMeaures()
-    OrderInt()
-    OrderDec()
-    IntMent()
-    IntWrit()
-    SubIntMent()
-    SubIntWrit()
-    MultEz()
-    DivEz()
-    UnitsLMC()
-    UTime()
-    UMon()
+    SpecialTriangles()#37
+    TriAngleCalc()#38
+    AnglePara()#39
+    PolySums()#40
+    RectArea()#41
+    ParArea()#42
+    TriArea()#43
+    TrapArea()#44
+    PValueint()#45
+    PVDecimals()#46
+    PVMeaures()#47
+    OrderInt()#48
+    OrderDec()#49
+    IntMent()#50
+    IntWrit()#51
+    SubIntMent()#52
+    SubIntWrit()#53
+    MultEz()#54
+    DivEz()#55
+    UnitsLMC()#56
+    UTime()#57
+    UMon()#58
 Primary()
