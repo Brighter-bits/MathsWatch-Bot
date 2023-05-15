@@ -1,4 +1,7 @@
+from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QLineEdit, QPushButton, QWidget
+from PyQt5.QtGui import QIcon
+import ctypes
 
 def DoPrimary():
     #This is the function which will Start the bot, currently there is only Primary
@@ -43,10 +46,14 @@ def CreateWindow():
 
     window.setWindowTitle("MathsWatch Bot")
     window.setGeometry(0, 0, 500, 500)
+    window.setWindowIcon(QtGui.QIcon('src\BB.ico'))
     widgets = []
     # layout.addWidget(QLabel("Bot"), 0, 0)
     primarybutton = QPushButton("Start Primary questions")
     primarybutton.clicked.connect(DoPrimary)
+    
+    myappid = 'mycompany.myproduct.subproduct.version' 
+    ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid) #This just makes the taskbar icon the same as the app icon
 
     #Puts all of these values into a list
     widgets.append(UsernameBox)
