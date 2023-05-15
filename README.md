@@ -29,4 +29,5 @@ If you wish, you can change your leaderboard name to Anonymous, follow the guide
 ## Going Anonymous (Now with pictures)
 Name's account->My account->Hide my name on leaderboards
 ![P1](https://github.com/Brighter-bits/MathsWatch-Bot/assets/85905618/2edada8c-d04d-421e-a3bf-2a898b3e1690)
+
 ![P2](https://github.com/Brighter-bits/MathsWatch-Bot/assets/85905618/c45e9f17-d283-4c86-a0e5-66d4e1cd81ac)
