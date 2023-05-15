@@ -34,7 +34,7 @@ def GettoPage():
     #Make a GUI then make it headless
     #Make it MultiFile to make myself look like a competent programmer ./ Success!
     #Maybe publish it on Github
-    #Turn it into an .exe
+    #Turn it into an .exe ./ Easier than I thought
     #Fix questions which won't submit/other problems
     #
     #Do Geometry
@@ -75,7 +75,7 @@ def CoordsQ4():
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
         #Click on the next question
-        #The li[number] will increase each question. During the harder questions, the div before li[number] changes from 3 to 1 and the li will reset to 3
+        #The li[number] will increase each question. During the harder questions, the div before li[number] changes from 1 to 3 and the li will reset to 3
         actions.click(water).perform()
 
         #As you may be able to see, most of this has been replaced by L.divinput2 from the Layouts file.
@@ -102,6 +102,7 @@ def AlgebraicVocab():
         L.divinput2("equation", "H1")
         L.divinput2("factors", "H2")
         L.divinput2("inequality")
+    except:
         print("3rr0r")
     finally:
         i+=1
