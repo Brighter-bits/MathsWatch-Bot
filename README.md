@@ -21,9 +21,13 @@ or clone the repository
 
 ## Notes
 This **CANNOT** do your homework (unless it is to get x amount of marks in any way possible), it doesn't work like that and implementing it would take some time.
+
 All tests are currently done on a 1920x1080 screen, being on a smaller screen resolution or windowing the program may cause problems as the menu bar squishes.
 
 If you wish, you can change your leaderboard name to Anonymous, follow the guide underneath if you are interested.
 
-## Going Anonymous
+## Going Anonymous (Now with pictures)
+Name's account->My account->Hide my name on leaderboards
+![P1](https://github.com/Brighter-bits/MathsWatch-Bot/assets/85905618/83090bd9-86c0-4016-bf47-dcaaf5a84b5b)
+![P2](https://github.com/Brighter-bits/MathsWatch-Bot/assets/85905618/024e9ec9-09c2-49ba-8621-cb264774e056)
 
