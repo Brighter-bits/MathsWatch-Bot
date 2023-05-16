@@ -12,9 +12,13 @@ actions = ActionChains(driver)
 cookies = 0
 driver.implicitly_wait(20)
 driver.get('https://vle.mathswatch.co.uk')
-with open("Global Variables.txt", 'r') as f:
-    Login = f.readlines() # Open the Global Variables and store the two lines as a single list
-    f.close
+try:
+    with open("Global Variables.txt", 'r') as f:
+        Login = f.readlines() # Open the Global Variables and store the two lines as a single list
+        f.close
+except:
+    pass
+
 if cookies != 0:
     #Note: MathsWatch's cookies are short term, however the login window is absolute hell to navigate through.
     #This does however, bypass the login limit
