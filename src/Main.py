@@ -6,7 +6,7 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 64
-i=64
+i=38
 delay = 0.5
 
 def GettoPage():
@@ -3659,7 +3659,7 @@ def HardAdd():
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
         actions.click(water).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[5]/a')
         actions.click(water).perform()
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[4]/input')
@@ -3674,7 +3674,19 @@ def HardAdd():
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
         actions.click(water).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[3]/a')
+        actions.click(water).perform()
+
+        L.NormSingleLongBox(5385, "H2")
+        L.NormSingleLongBox(8140, "H3")
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "157230").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "110958").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
         actions.click(water).perform()
     
    
@@ -3726,7 +3738,7 @@ def Primary():
     # PropsofQuads()#35
 
     # SpecialTriangles()#37
-    # TriAngleCalc()#38
+    TriAngleCalc()#38
     # AnglePara()#39
     # PolySums()#40
     # RectArea()#41
@@ -3752,5 +3764,5 @@ def Primary():
     # Factors()#61
     # Multiples()#62
     # Patterns()#63
-    HardAdd()#64
+    # HardAdd()#64
 Primary()
