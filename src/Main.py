@@ -31,8 +31,9 @@ def GettoPage():
     #Finish all/most of the questions
     #Log in properly with Username and Password ./ COMPLETE!
     #Make a GUI then make it headless
+    #Allow people with smaller screens by loading the website again but changing the URL to the next question
     #Make it MultiFile to make myself look like a competent programmer ./ Success!
-    #Maybe publish it on Github
+    #Maybe publish it on Github ./ Done, It is now publically open source
     #Turn it into an .exe ./ Easier than I thought
     #Fix questions which won't submit/other problems
     #
@@ -3738,7 +3739,7 @@ def Primary():
     # PropsofQuads()#35
 
     # SpecialTriangles()#37
-    TriAngleCalc()#38
+    # TriAngleCalc()#38
     # AnglePara()#39
     # PolySums()#40
     # RectArea()#41
@@ -3765,4 +3766,6 @@ def Primary():
     # Multiples()#62
     # Patterns()#63
     # HardAdd()#64
+    
+
 Primary()

@@ -43,7 +43,10 @@ def CreateWindow():
             f.close()
         UsernameBox.setText(Memory[0].strip("\n"))
         PasswordBox.setText(Memory[1].strip("\n"))
-        Twice.setChecked(bool(Memory[2]))
+        if Memory[2].strip("\n") == "False":
+            Twice.setChecked(False)
+        else:
+            Twice.setChecked(True)
     except:
         Twice.setChecked(True)
         pass

@@ -27,13 +27,14 @@ if cookies != 0:
     for cookie in cookies:
         driver.add_cookie(cookie)
 else:
-    if bool(Login[2]) == True:
-        water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/forminput[1]/formgroup/div/div/span/input')
-        actions.click(water).send_keys_to_element(water, Login[0]).perform()
+    print(Login)
     water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/forminput[1]/formgroup/div/div/span/input')
-    actions.click(water).send_keys_to_element(water, Login[0]).perform()
+    actions.click(water).send_keys_to_element(water, Login[0].strip("\n")).perform()
+    if Login[2].strip("\n") == "True":
+        water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/forminput[1]/formgroup/div/div/span/input')
+        actions.send_keys_to_element(water, Login[0].strip("\n")).perform()
     #Don't ask why it is done twice. IT JUST WORKS!
     water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/forminput[2]/formgroup/div/div/span/input')
-    actions.click(water).send_keys_to_element(water, Login[1]).perform()
+    actions.click(water).send_keys_to_element(water, Login[1].strip("\n")).perform()
     water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/div/div/div/div/button[2]')
     actions.click(water).perform()
