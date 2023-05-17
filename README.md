@@ -15,7 +15,7 @@ or clone the repository
 
 ### Cloning the Repo
 1. Clone the repo whichever way you wish
-2. If you chose the dev build, uncomment the functions you wish to use in Primary()
+2. If you use the dev build, uncomment the functions you wish to use in Primary()
 3. Install the reqirements with pip -r (Path to requirements.txt)
 4. Run GUI.py and the program should start properly
 
