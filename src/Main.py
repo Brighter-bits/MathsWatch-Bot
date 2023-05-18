@@ -5,8 +5,8 @@ from Driver import By
 from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
-#The current set of questions being worked on is 71
-i=71
+#The current set of questions being worked on is 76
+i=76
 delay = 0.5
 
 def GettoPage():
@@ -4133,7 +4133,7 @@ def POTDec():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/span/div/div[1]')
         actions.send_keys_to_element(water, "0.07").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/span/div/div[1]')
-        actions.send_keys_to_element(water, "272.4").perform()
+        actions.send_keys_to_element(water, "0.02714").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
@@ -4164,7 +4164,7 @@ def NegativesIRL():
     global i
     time.sleep(delay)
     try:
-        L.SymSingleLongBox("-4", "L2")
+        L.SymSingleLongBox("-6", "L2")
         L.SymSingleLongBox(7, "L3")
         L.divinput2(7, "H1", "-6")
         L.divinput2("Dundee", "H2", 8, "Dundee")
@@ -4181,8 +4181,22 @@ def DirectedNumbers():
     global i
     time.sleep(delay)
     try:
-        L.divinput2("B", "L1", "D", "C", "A")
-        L.divinput2("-4", "L2", "-11", 3)
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, "B").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, "D").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[3]/input')
+        actions.send_keys_to_element(water, "C").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[4]/input')
+        actions.send_keys_to_element(water, "A").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        actions.click(water).perform()
+        
+        L.divinput2("-4", "L3", "-11", 3)
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
         actions.send_keys_to_element(water, "17").perform()
@@ -4193,9 +4207,9 @@ def DirectedNumbers():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
         actions.send_keys_to_element(water, "7").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[2]/input')
-        actions.send_keys_to_element(water, "10").perform()
+        actions.send_keys_to_element(water, "11").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[1]/input')
-        actions.send_keys_to_element(water, "6").perform()
+        actions.send_keys_to_element(water, "5").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
@@ -4204,7 +4218,22 @@ def DirectedNumbers():
         actions.click(water).perform()
 
         L.divinput2("5 3/4", "H1", "-3")
-        L.divinput2("D", "H2", "A", "C", "B")
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, "D").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, "A").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[3]/input')
+        actions.send_keys_to_element(water, "C").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[4]/input')
+        actions.send_keys_to_element(water, "B").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[4]/a')
+        actions.click(water).perform()
+
         L.divinput2(8, "H3", 3, "-3")
         L.divinput2(5, "H4", 4)
 
@@ -4257,12 +4286,12 @@ def BODMAS():
         L.divinput2(50, "L5", 100)
         L.divinput2(24, "H1", 8)
 
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
-        actions.send_keys_to_element(water, "7").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[2]/input')
-        actions.send_keys_to_element(water, "10").perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[1]/input')
-        actions.send_keys_to_element(water, "6").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/span/div/div[1]')
+        actions.send_keys_to_element(water, "28").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/span/div/div[1]')
+        actions.send_keys_to_element(water, "32").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[3]/div/subtag/div/formgroup/div/div/span/div/div[1]')
+        actions.send_keys_to_element(water, "4").perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
@@ -4270,6 +4299,113 @@ def BODMAS():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[4]/a')
         actions.click(water).perform()
 
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/span/div/div[1]')
+        actions.send_keys_to_element(water, "5").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/span/div/div[1]')
+        actions.send_keys_to_element(water, "62").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[5]/a')
+        actions.click(water).perform()
+
+        L.divinput2(2, "H4", 99)
+        L.divinput2(101, "H5", 1800)
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, "-").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, "-").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[3]/input')
+        actions.send_keys_to_element(water, "+").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[1]/input')
+        actions.send_keys_to_element(water, "+").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
+        actions.send_keys_to_element(water, "-").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[3]/input')
+        actions.send_keys_to_element(water, "+").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[8]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, "+").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, "-").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[3]/input')
+        actions.send_keys_to_element(water, "x").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[1]/input')
+        actions.send_keys_to_element(water, "x").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
+        actions.send_keys_to_element(water, "+").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[3]/input')
+        actions.send_keys_to_element(water, "-").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
+def DisTables():
+    global i
+    time.sleep(delay)
+    try:
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "150").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/forminput/formgroup/div/div/span/input')
+        actions.send_keys_to_element(water, "Sheffield, Cambridge").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[3]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "161").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "73").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/forminput/formgroup/div/div/span/input')
+        actions.send_keys_to_element(water, "York").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[3]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "162").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[3]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "107").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/forminput/formgroup/div/div/span/input')
+        actions.send_keys_to_element(water, "Halifax").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[3]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "61").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[4]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "583").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "485").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
 
 
     except:
@@ -4277,6 +4413,8 @@ def BODMAS():
     finally:
         i+=1
         GettoPage()
+
+
 
 def Primary():
     Myth = time.time()
@@ -4352,11 +4490,12 @@ def Primary():
     # ShMultDec()#69
     # SDIntegers()#70
     # POT()#71
-    POTDec()#72
-    NegativesIRL()#73
-    DirectedNumbers()#74
-    DirectedNumbers2()#75
-    BODMAS()#76
+    # POTDec()#72
+    # NegativesIRL()#73
+    # DirectedNumbers()#74
+    # DirectedNumbers2()#75
+    # BODMAS()#76
+    DisTables()#77
     print(time.time() - Myth)
 
 Primary()
