@@ -6,7 +6,7 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 76
-i=76
+i=1
 delay = 0.5
 
 def GettoPage():
@@ -4419,82 +4419,82 @@ def DisTables():
 def Primary():
     Myth = time.time()
     GettoPage()
-    # CoordsQ1()#1
-    # CoordsQ4()#2
-    # AlgebraicVocab()#3
-    # FormulaInWords()#4
-    # AlgebraicNotation()#5
-    # HIV_Lines()#6
-    # LikeTerms()#7
-    # AlgSimMult()#8
-    # AlgSimDiv()#9
-    # ExpandingBrackets()#10
-    # Factorisation()#11
-    # Substitution()#12
-    # SeqTtT()#13
-    # SeqPtS()#14
-    # findNTerm()#15
-    # GeometricDef()#16
-    # CircleProp()#17
+    CoordsQ1()#1
+    CoordsQ4()#2
+    AlgebraicVocab()#3
+    FormulaInWords()#4
+    AlgebraicNotation()#5
+    HIV_Lines()#6
+    LikeTerms()#7
+    AlgSimMult()#8
+    AlgSimDiv()#9
+    ExpandingBrackets()#10
+    Factorisation()#11
+    Substitution()#12
+    SeqTtT()#13
+    SeqPtS()#14
+    findNTerm()#15
+    GeometricDef()#16
+    CircleProp()#17
 
 
 
 
 
 
-    # CountingSquares()#24
-    # PeriFormula()#25
-    # CountingAreaSquares()#26
-    # BeginnerAngles()#27
-    # NotMeasuringAngles()#28
+    CountingSquares()#24
+    PeriFormula()#25
+    CountingAreaSquares()#26
+    BeginnerAngles()#27
+    NotMeasuringAngles()#28
 
-    # Polygons()#30
-    # TreeDProps()#31
-    # TreeDModels()#32
-    # TreeDNets()#33
-    # AngleFacts()#34
-    # PropsofQuads()#35
+    Polygons()#30
+    TreeDProps()#31
+    TreeDModels()#32
+    TreeDNets()#33
+    AngleFacts()#34
+    PropsofQuads()#35
 
-    # SpecialTriangles()#37
-    # TriAngleCalc()#38
-    # AnglePara()#39
-    # PolySums()#40
-    # RectArea()#41
-    # ParArea()#42
-    # TriArea()#43
-    # TrapArea()#44
-    # PValueint()#45
-    # PVDecimals()#46
-    # PVMeaures()#47
-    # OrderInt()#48
-    # OrderDec()#49
-    # IntMent()#50
-    # IntWrit()#51
-    # SubIntMent()#52
-    # SubIntWrit()#53
-    # MultEz()#54
-    # DivEz()#55
-    # UnitsLMC()#56
-    # UTime()#57
-    # UMon()#58
-    # Reading()#59
-    # Symbols()#60
-    # Factors()#61
-    # Multiples()#62
-    # Patterns()#63
-    # HardAdd()#64
-    # DecAdd()#65
-    # HardSub()#66
-    # DecSub()#67
-    # ShMultInt()#68
-    # ShMultDec()#69
-    # SDIntegers()#70
-    # POT()#71
-    # POTDec()#72
-    # NegativesIRL()#73
-    # DirectedNumbers()#74
-    # DirectedNumbers2()#75
-    # BODMAS()#76
+    SpecialTriangles()#37
+    TriAngleCalc()#38
+    AnglePara()#39
+    PolySums()#40
+    RectArea()#41
+    ParArea()#42
+    TriArea()#43
+    TrapArea()#44
+    PValueint()#45
+    PVDecimals()#46
+    PVMeaures()#47
+    OrderInt()#48
+    OrderDec()#49
+    IntMent()#50
+    IntWrit()#51
+    SubIntMent()#52
+    SubIntWrit()#53
+    MultEz()#54
+    DivEz()#55
+    UnitsLMC()#56
+    UTime()#57
+    UMon()#58
+    Reading()#59
+    Symbols()#60
+    Factors()#61
+    Multiples()#62
+    Patterns()#63
+    HardAdd()#64
+    DecAdd()#65
+    HardSub()#66
+    DecSub()#67
+    ShMultInt()#68
+    ShMultDec()#69
+    SDIntegers()#70
+    POT()#71
+    POTDec()#72
+    NegativesIRL()#73
+    DirectedNumbers()#74
+    DirectedNumbers2()#75
+    BODMAS()#76
     DisTables()#77
     print(time.time() - Myth)
 

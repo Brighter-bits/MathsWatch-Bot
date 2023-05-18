@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
+import time
 option = webdriver.EdgeOptions()
 option.add_experimental_option("detach", True)
 option.add_argument("start-maximized")#The more space the easier it is to manipulate
@@ -27,7 +28,6 @@ if cookies != 0:
     for cookie in cookies:
         driver.add_cookie(cookie)
 else:
-    print(Login)
     water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/forminput[1]/formgroup/div/div/span/input')
     actions.click(water).send_keys_to_element(water, Login[0].strip("\n")).perform()
     if Login[2].strip("\n") == "True":
@@ -38,3 +38,4 @@ else:
     actions.click(water).send_keys_to_element(water, Login[1].strip("\n")).perform()
     water = driver.find_element(by=By.XPATH, value='/html/body/modal/div[1]/div/div/div[2]/div/div[1]/form/div/div/div/div/button[2]')
     actions.click(water).perform()
+    time.sleep(1)
