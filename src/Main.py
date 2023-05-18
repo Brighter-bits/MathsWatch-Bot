@@ -4231,6 +4231,53 @@ def DirectedNumbers():
         i+=1
         GettoPage()
 
+def DirectedNumbers2():
+    global i
+    time.sleep(delay)
+    try:
+        L.divinput2("-18", "L2", "-20", "14")
+        L.divinput2("-2", "H1", "-8", "6")
+        L.divinput2("-30", "H2", 24, "-35")
+        L.divinput2("-3", "H3", "-21", "-30")
+        L.divinput2("-35", 0, "-4")
+
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
+def BODMAS():
+    global i
+    time.sleep(delay)
+    try:
+        L.divinput2(11, "L2", 14)
+        L.divinput2(29, "L3", 100)
+        L.divinput2(11, "L4", 7)
+        L.divinput2(50, "L5", 100)
+        L.divinput2(24, "H1", 8)
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
+        actions.send_keys_to_element(water, "7").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[2]/input')
+        actions.send_keys_to_element(water, "10").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[1]/input')
+        actions.send_keys_to_element(water, "6").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[4]/a')
+        actions.click(water).perform()
+
+
+
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
 def Primary():
     Myth = time.time()
     GettoPage()
@@ -4308,6 +4355,8 @@ def Primary():
     POTDec()#72
     NegativesIRL()#73
     DirectedNumbers()#74
+    DirectedNumbers2()#75
+    BODMAS()#76
     print(time.time() - Myth)
 
 Primary()
