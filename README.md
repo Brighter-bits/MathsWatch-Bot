@@ -1,7 +1,7 @@
 # MathsWatch-Bot
 A Bot which completes questions in the "my progress" tab for MathsWatch, allowing you to get enough points to get first on the leaderboards.
 
-It can currently get 678 total points as of 14/03/23
+It can currently get 1071 total points as of 18/05/23 and takes ~19 minutes to fully complete
 
 ## Installation
 You can either:
