@@ -57,7 +57,7 @@ def NormSingleLongBox(answer, next=0):
             water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div['+str(num2)+']/ul/li['+str(int(num)+2)+']/a')
             actions.click(water).perform()
 
-def divinput2(first = "kumquats", next = 0, second = "kumquats", third = "kumquats", fourth = "kumquats"):
+def divinput2(first = "kumquats", next = 0, second = "kumquats", third = "kumquats", fourth = "kumquats", fifth = "kumquats"):
     """
     This is a function to quickly answer questions in the white area (directly next to the question)
     
@@ -78,6 +78,9 @@ def divinput2(first = "kumquats", next = 0, second = "kumquats", third = "kumqua
             if fourth != "kumquats":
                 water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[5]/div/input')
                 actions.send_keys_to_element(water, fourth).perform()
+                if fifth != "kumquats":
+                    water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[6]/div/input')
+                    actions.send_keys_to_element(water, fifth).perform()
     water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
     actions.click(water).perform()
     water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
