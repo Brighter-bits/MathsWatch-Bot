@@ -5,8 +5,8 @@ from Driver import By
 from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
-#The current set of questions being worked on is 85
-i=85
+#The current set of questions being worked on is 86
+i=86
 delay = 0.5
 
 def GettoPage():
@@ -3775,6 +3775,58 @@ def PercOfAmount():
         i+=1
         GettoPage()
 
+def Power():
+    global i
+    time.sleep(delay)
+    try:
+        L.NormLongBox(64, "L2")
+        L.NormLongBox(100, "L3")
+        L.NormLongBox(52, "L4")
+        L.NormLongBox(125, "H1")
+        L.NormLongBox(7, "H2")
+        L.NormLongBox(2, "H3")
+        L.NormLongBox(17, 0)
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
+def FunctionMachines():
+    global i
+    time.sleep(delay)
+    try:
+        L.divinput2(24, "L2", 13)
+        L.divinput2(6, "L3", 9)
+        L.divinput2(24, "H1", 18)
+        L.divinput2(19, "H2")
+        L.divinput2(8, "H3")
+        L.divinput2(9, "H4")
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, "D").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, "B").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[1]/input')
+        actions.send_keys_to_element(water, "A").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
+        actions.send_keys_to_element(water, "D").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[7]/a')
+        actions.click(water).perform()
+
+        L.divinput2(17, 0)
+
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
+
 def Primary():
     Myth = time.time()
     GettoPage()
@@ -3862,8 +3914,9 @@ def Primary():
     # EqFractions()#82
     # SimpFractions()#83
     # IntroPercentages()#84
-    PercOfAmount()#85
-
+    # PercOfAmount()#85
+    # Power()#86
+    FunctionMachines()#87
     print(time.time() - Myth)
 
 Primary()
