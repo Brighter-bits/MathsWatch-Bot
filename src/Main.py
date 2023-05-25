@@ -3826,6 +3826,26 @@ def FunctionMachines():
         i+=1
         GettoPage()
 
+def Rounding():
+    global i
+    time.sleep(delay)
+    try:
+        L.NormLongBox(60, "L2", 240, 480)
+        L.NormLongBox(400, "L3", 2800, 5400)
+        L.NormLongBox(6000, "L4", 138000, 79000)
+        L.divinput2(87700, "H1", 8800, 900)
+        L.NormLongBox(1630, "H2", 2930) 
+        L.NormLongBox(8300, "H3", 1700)
+        L.NormLongBox(143000, "H4", 263000)
+        L.NormLongBox(40800, 0, 4100, 400)
+
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
+
 
 def Primary():
     Myth = time.time()
@@ -3916,7 +3936,8 @@ def Primary():
     # IntroPercentages()#84
     # PercOfAmount()#85
     # Power()#86
-    FunctionMachines()#87
+    # FunctionMachines()#87
+    Rounding()#88
     print(time.time() - Myth)
 
 Primary()

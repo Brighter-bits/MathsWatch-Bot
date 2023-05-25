@@ -4,7 +4,7 @@ from Driver import By
 recurrence=1
 def SymLongBox(answer, next=0, second="Melons", third="Melons", fourth="Melons"):
     """
-    This is a function to quickly answer the questions with a single long answer box to the side with an extra small box which has a symbol infront or behind it e.g '£', PM, AM, cm
+    This is a function to quickly answer the questions with a long answer box to the side, which have an extra small box containing a symbol infront or behind it e.g '£', PM, AM, cm
 
     answer = the answer to the question
 
@@ -46,7 +46,7 @@ def SymLongBox(answer, next=0, second="Melons", third="Melons", fourth="Melons")
 
 def NormLongBox(answer, next=0, second="Tangerine", third="Tangerine", fourth="Tangerine", fifth="Tangerine"):
     """
-    This is a function to quickly answer the questions with a single long answer box
+    This is a function to quickly answer the questions with a long answer box
 
     answer = the answer to the question
 
