@@ -5,8 +5,8 @@ from Driver import By
 from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
-#The current set of questions being worked on is 86
-i=86
+#The current set of questions being worked on is 89
+i=89
 delay = 0.5
 
 def GettoPage():
@@ -3837,7 +3837,7 @@ def Rounding():
         L.NormLongBox(1630, "H2", 2930) 
         L.NormLongBox(8300, "H3", 1700)
         L.NormLongBox(143000, "H4", 263000)
-        L.NormLongBox(40800, 0, 4100, 400)
+        L.divinput2(40800, 0, 4100, 400)
 
     except:
         print("3rr0r", i)
@@ -3845,7 +3845,34 @@ def Rounding():
         i+=1
         GettoPage()
 
+def RoundingDec():
+    global i
+    time.sleep(delay)
+    try:
+        L.NormLongBox(53.8, "L2", 0)
+        L.NormLongBox(422.7, "L3", 0)
+        L.NormLongBox(89.3, "L4", 0)
+        L.NormLongBox(0.72, "L5", 0)
+        L.NormLongBox(8.84, "L6", 0)
+        L.NormLongBox(8.84, "H1", 0)
+        L.NormLongBox("37.0", "H2", 0)
+        L.NormLongBox("23.30", "H3", 0)
+        L.NormLongBox("5.00", "H4", 0)
+        
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]')
+        actions.send_keys_to_element(water, "3.1416").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/div/div/div[1]/div')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
 
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
 
 def Primary():
     Myth = time.time()
@@ -3937,7 +3964,8 @@ def Primary():
     # PercOfAmount()#85
     # Power()#86
     # FunctionMachines()#87
-    Rounding()#88
+    # Rounding()#88
+    RoundingDec()#89
     print(time.time() - Myth)
 
 Primary()
