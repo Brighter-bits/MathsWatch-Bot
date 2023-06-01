@@ -3,3 +3,4 @@ src/Driver.py
 Cookie.py
 Global Variables.txt
 output/
+*.log

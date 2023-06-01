@@ -1,3 +1,10 @@
+MakeLog = 1 #Make this an on/off option in the GUI
+if MakeLog == 1:
+    import sys
+    import os
+    if os.path.exists("MSB.log"):
+        os.remove("MSB.log")
+    sys.stdout = open("MSB.log", "w")
 import time
 from Driver import driver
 from Driver import actions
@@ -5,8 +12,8 @@ from Driver import By
 from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
-#The current set of questions being worked on is 94
-i=94
+#The current set of questions being worked on is 95
+i=95
 delay = 0.5
 
 def GettoPage():
@@ -4111,6 +4118,53 @@ def Prime():
         i+=1
         GettoPage() 
 
+def PrimeFactors():
+    global i
+    time.sleep(delay)
+    try:
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, 12).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, 6).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[3]/input')
+        actions.send_keys_to_element(water, 2).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[4]/input')
+        actions.send_keys_to_element(water, 2).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div/input')
+        actions.send_keys_to_element(water, "2x2x2x3").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[4]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, 9).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, 3).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[3]/input')
+        actions.send_keys_to_element(water, 3).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div/input')
+        actions.send_keys_to_element(water, "2x3x3").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[3]/a')
+        actions.click(water).perform()
+
+        L.divinput2("2 × 5 × 5", "H2")
+        L.divinput2("2 × 3 × 3 × 5", 0)
+        
+    except:
+        print("3rr0r", i)
+    finally:
+        i+=1
+        GettoPage()
+
+
+
 def Primary():
     Myth = time.time()
     GettoPage()
@@ -4207,10 +4261,14 @@ def Primary():
     # LongMultDec()#91
     # LongDiv()#92
     # LongDivDec()#93
-    Prime()#94
+    # Prime()#94
+    PrimeFactors()#95
     print(time.time() - Myth)
 
 Primary()
+
+if MakeLog == 1:
+    sys.stdout.close()
 
 ##### Template for functions #####
     # global i
