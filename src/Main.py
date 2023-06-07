@@ -6,7 +6,7 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 100
-i=100
+i=1
 delay = 0.5
 
 
@@ -23,10 +23,10 @@ def GettoPage():
     water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/panel[1]/div/div/button[1]')
     actions.move_to_element(water).click().perform()
 
-#Current total points from running all the code as of 14/03/23
-#Primary: 678
+#Current total points from running all the code as of 07/06/23
+#Primary: 1523
 #KS3: 234
-#Total: 912
+#Total: 1766
 
 #TODO:
     #Finish all/most of the questions
@@ -328,11 +328,35 @@ def Substitution():
         actions.click(water).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[7]/a')
         actions.click(water).perform()
-        
-        L.SymLongBox(11, "H1", "-9")
-        L.SymLongBox("-10", "H2", 25, 75)
-        L.NormLongBox(25, "H3", 100, 4, 625)
-        L.NormLongBox(36, 0, 5, 1296)
+
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/div/div/div[1]")
+        actions.send_keys_to_element(water, 11).perform
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/div/div/div[1]/span[2]")
+        actions.send_keys_to_element(water, "-9").perform
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[3]/div/subtag/div/div/div/div[2]/div")
+        actions.click().perform
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[3]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/formgroup/div/div/span/div/div[1]")
+        actions.send_keys_to_element(water, "-10").perform
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[2]/div/subtag/div/formgroup/div/div/span/div/div[1]")
+        actions.send_keys_to_element(water, 25).perform
+        water = driver.find_element(by=By.XPATH, value = "/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[3]/div/subtag/div/formgroup/div/div/span/div/div[1]")
+        actions.send_keys_to_element(water, 75).perform
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[4]/a')
+        actions.click(water).perform()
+
+        L.SymLongBox(25, "H3", 100, 4, 625)
+        L.SymLongBox(36, 0, 5, 1296)
         #A few of these questions don't let the answer button get pressed, as such they have been skipped.
         #JUST LET ME PRESS SUBMIT ANSWERS!
     except:
@@ -4692,14 +4716,14 @@ def Primary():
     FDP()#98
     FractionsofAmounts()#99
     OrderFrac()#100
-
+    
 
     print(time.time() - Myth)
+    if MakeLog == 1:
+        sys.stdout.close()
 
 # Primary()
 
-if MakeLog == 1:
-    sys.stdout.close()
 
 ##### Template for functions #####
     # global i
