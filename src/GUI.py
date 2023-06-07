@@ -1,6 +1,6 @@
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QLineEdit, QPushButton, QWidget, QCheckBox
-from PyQt5.QtGui import QIcon
+import MWBimg
 import ctypes
 
 def DoPrimary():
@@ -54,7 +54,7 @@ def CreateWindow():
     window.setWindowTitle("MathsWatch Bot")
     window.setGeometry(0, 0, 500, 500)
     # window.setWindowIcon(QtGui.QIcon('src\BB.ico')) #Use this when not compiling in src
-    window.setWindowIcon(QtGui.QIcon('BB.ico'))
+    window.setWindowIcon(QtGui.QIcon(':BB.ico'))
     widgets = []
     # layout.addWidget(QLabel("Bot"), 0, 0)
     primarybutton = QPushButton("Start Primary questions")
