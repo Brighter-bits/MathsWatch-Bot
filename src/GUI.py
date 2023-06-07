@@ -53,7 +53,8 @@ def CreateWindow():
 
     window.setWindowTitle("MathsWatch Bot")
     window.setGeometry(0, 0, 500, 500)
-    window.setWindowIcon(QtGui.QIcon('src\BB.ico'))
+    # window.setWindowIcon(QtGui.QIcon('src\BB.ico')) #Use this when not compiling in src
+    window.setWindowIcon(QtGui.QIcon('BB.ico'))
     widgets = []
     # layout.addWidget(QLabel("Bot"), 0, 0)
     primarybutton = QPushButton("Start Primary questions")
@@ -80,4 +81,5 @@ def CreateWindow():
     window.setMenuWidget(widget)
     window.show()
     app.exec()
+
 CreateWindow()
