@@ -5,8 +5,8 @@ from Driver import By
 from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
-#The current set of questions being worked on is 98
-i=98
+#The current set of questions being worked on is 100
+i=100
 delay = 0.5
 
 
@@ -4449,9 +4449,9 @@ def FractionsofAmounts():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
         actions.send_keys_to_element(water, 4).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[1]/input')
-        actions.send_keys_to_element(water, 1).perform()
-        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
         actions.send_keys_to_element(water, 2).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
+        actions.send_keys_to_element(water, 5).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[1]/input')
         actions.send_keys_to_element(water, 3).perform()
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[2]/input')
@@ -4474,8 +4474,27 @@ def OrderFrac():
     global i
     time.sleep(delay)
     try:
-        L.divinput2("7/8", "L2", "1/4", "2/3")
-        L.divinput2("1/6", "L3", "3/8", "4/5")
+        L.divinput2( "B","L2", "C","A")
+        L.divinput2( "C", "L3", "A", "B")
+        
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
+        actions.send_keys_to_element(water, 1).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[2]/input')
+        actions.send_keys_to_element(water, 5).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[1]/input')
+        actions.send_keys_to_element(water, 1).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[3]/div[2]/input')
+        actions.send_keys_to_element(water, 4).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[1]/input')
+        actions.send_keys_to_element(water, 1).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[4]/div[2]/input')
+        actions.send_keys_to_element(water, 2).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[6]/a')
+        actions.click(water).perform()
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[1]/div[2]/div[1]/input')
         actions.send_keys_to_element(water, 1).perform()
@@ -4534,8 +4553,23 @@ def OrderFrac():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[5]/a')
         actions.click(water).perform()
 
-        L.NormLongBox("Decreasing", "H4")
-        L.NormLongBox("Decreasing", "H5")
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div/div/subtag/div/forminput/formgroup/div/div/span/input')
+        actions.send_keys_to_element(water, "Decreasing").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[6]/a')
+        actions.click(water).perform()
+
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div/div/subtag/div/forminput/formgroup/div/div/span/input')
+        actions.send_keys_to_element(water, "Decreasing").perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/div/div/button')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/toaster/div/a')
+        actions.click(water).perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[3]/ul/li[7]/a')
+        actions.click(water).perform()
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div/div/subtag/div/div/div/div[1]/div')
         actions.click(water).perform()
@@ -4558,103 +4592,103 @@ def OrderFrac():
 def Primary():
     Myth = time.time()
     GettoPage()
-    # CoordsQ1()#1
-    # CoordsQ4()#2
-    # AlgebraicVocab()#3
-    # FormulaInWords()#4
-    # AlgebraicNotation()#5
-    # HIV_Lines()#6
-    # LikeTerms()#7
-    # AlgSimMult()#8
-    # AlgSimDiv()#9
-    # ExpandingBrackets()#10
-    # Factorisation()#11
-    # Substitution()#12
-    # SeqTtT()#13
-    # SeqPtS()#14
-    # findNTerm()#15
-    # GeometricDef()#16
-    # CircleProp()#17
+    CoordsQ1()#1
+    CoordsQ4()#2
+    AlgebraicVocab()#3
+    FormulaInWords()#4
+    AlgebraicNotation()#5
+    HIV_Lines()#6
+    LikeTerms()#7
+    AlgSimMult()#8
+    AlgSimDiv()#9
+    ExpandingBrackets()#10
+    Factorisation()#11
+    Substitution()#12
+    SeqTtT()#13
+    SeqPtS()#14
+    findNTerm()#15
+    GeometricDef()#16
+    CircleProp()#17
 
 
 
 
 
 
-    # CountingSquares()#24
-    # PeriFormula()#25
-    # CountingAreaSquares()#26
-    # BeginnerAngles()#27
-    # NotMeasuringAngles()#28
+    CountingSquares()#24
+    PeriFormula()#25
+    CountingAreaSquares()#26
+    BeginnerAngles()#27
+    NotMeasuringAngles()#28
 
-    # Polygons()#30
-    # TreeDProps()#31
-    # TreeDModels()#32
-    # TreeDNets()#33
-    # AngleFacts()#34
-    # PropsofQuads()#35
+    Polygons()#30
+    TreeDProps()#31
+    TreeDModels()#32
+    TreeDNets()#33
+    AngleFacts()#34
+    PropsofQuads()#35
 
-    # SpecialTriangles()#37
-    # TriAngleCalc()#38
-    # AnglePara()#39
-    # PolySums()#40
-    # RectArea()#41
-    # ParArea()#42
-    # TriArea()#43
-    # TrapArea()#44
-    # PValueint()#45
-    # PVDecimals()#46
-    # PVMeaures()#47
-    # OrderInt()#48
-    # OrderDec()#49
-    # IntMent()#50
-    # IntWrit()#51
-    # SubIntMent()#52
-    # SubIntWrit()#53
-    # MultEz()#54
-    # DivEz()#55
-    # UnitsLMC()#56
-    # UTime()#57
-    # UMon()#58
-    # Reading()#59
-    # Symbols()#60
-    # Factors()#61
-    # Multiples()#62
-    # Patterns()#63
-    # HardAdd()#64
-    # DecAdd()#65
-    # HardSub()#66
-    # DecSub()#67
-    # ShMultInt()#68
-    # ShMultDec()#69
-    # SDIntegers()#70
-    # POT()#71
-    # POTDec()#72
-    # NegativesIRL()#73
-    # DirectedNumbers()#74
-    # DirectedNumbers2()#75
-    # BODMAS()#76
-    # DisTables()#77
-    # TimeTables()#78
-    # IRLProblems()#79
-    # IRLCalc()#80
-    # ShadowFractions()#81
-    # EqFractions()#82
-    # SimpFractions()#83
-    # IntroPercentages()#84
-    # PercOfAmount()#85
-    # Power()#86
-    # FunctionMachines()#87
-    # Rounding()#88
-    # RoundingDec()#89
-    # LongMult()#90
-    # LongMultDec()#91
-    # LongDiv()#92
-    # LongDivDec()#93
-    # Prime()#94
-    # PrimeFactors()#95
-    # HCF()#96
-    # LCM()#97
+    SpecialTriangles()#37
+    TriAngleCalc()#38
+    AnglePara()#39
+    PolySums()#40
+    RectArea()#41
+    ParArea()#42
+    TriArea()#43
+    TrapArea()#44
+    PValueint()#45
+    PVDecimals()#46
+    PVMeaures()#47
+    OrderInt()#48
+    OrderDec()#49
+    IntMent()#50
+    IntWrit()#51
+    SubIntMent()#52
+    SubIntWrit()#53
+    MultEz()#54
+    DivEz()#55
+    UnitsLMC()#56
+    UTime()#57
+    UMon()#58
+    Reading()#59
+    Symbols()#60
+    Factors()#61
+    Multiples()#62
+    Patterns()#63
+    HardAdd()#64
+    DecAdd()#65
+    HardSub()#66
+    DecSub()#67
+    ShMultInt()#68
+    ShMultDec()#69
+    SDIntegers()#70
+    POT()#71
+    POTDec()#72
+    NegativesIRL()#73
+    DirectedNumbers()#74
+    DirectedNumbers2()#75
+    BODMAS()#76
+    DisTables()#77
+    TimeTables()#78
+    IRLProblems()#79
+    IRLCalc()#80
+    ShadowFractions()#81
+    EqFractions()#82
+    SimpFractions()#83
+    IntroPercentages()#84
+    PercOfAmount()#85
+    Power()#86
+    FunctionMachines()#87
+    Rounding()#88
+    RoundingDec()#89
+    LongMult()#90
+    LongMultDec()#91
+    LongDiv()#92
+    LongDivDec()#93
+    Prime()#94
+    PrimeFactors()#95
+    HCF()#96
+    LCM()#97
     FDP()#98
     FractionsofAmounts()#99
     OrderFrac()#100
@@ -4662,7 +4696,7 @@ def Primary():
 
     print(time.time() - Myth)
 
-Primary()
+# Primary()
 
 if MakeLog == 1:
     sys.stdout.close()
