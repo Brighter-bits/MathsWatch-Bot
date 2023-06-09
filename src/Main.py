@@ -6,22 +6,26 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 100
-i=1
+i=19
 delay = 0.5
-
+SmallPP=1
 
 
 def GettoPage():
-    #This takes the user to the My Progress page and is indented to enter each task once the previous one has been finished
-    driver.get('https://vle.mathswatch.co.uk/vle/stats/')
-    water = Select(driver.find_element(by=By.XPATH, value = '/html/body/app/main/div[2]/routehandler/div/panel/div/student-stats/div[2]/div[2]/div/div[1]/div[2]/select'))
-    #Interestingly, many Primary and KS3 questions are almost identical
-    #TODO: Set it up so that the entire code runs again but in the KS3 category automatically, most of the work is already done so we could also do it again but with some variations
-    water.select_by_visible_text('Primary')
-    water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/panel/div/student-stats/div[2]/div[2]/div/div[2]/table/tbody/tr[' + str(i) + ']/td[3]/a')
-    actions.move_to_element(water).click().perform()
-    water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/panel[1]/div/div/button[1]')
-    actions.move_to_element(water).click().perform()
+    if SmallPP != 1:
+        #This takes the user to the My Progress page and is indented to enter each task once the previous one has been finished
+        driver.get('https://vle.mathswatch.co.uk/vle/stats/')
+        water = Select(driver.find_element(by=By.XPATH, value = '/html/body/app/main/div[2]/routehandler/div/panel/div/student-stats/div[2]/div[2]/div/div[1]/div[2]/select'))
+        #Interestingly, many Primary and KS3 questions are almost identical
+        #TODO: Set it up so that the entire code runs again but in the KS3 category automatically, most of the work is already done so we could also do it again but with some variations
+        water.select_by_visible_text('Primary')
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/panel/div/student-stats/div[2]/div[2]/div/div[2]/table/tbody/tr[' + str(i) + ']/td[3]/a')
+        actions.move_to_element(water).click().perform()
+        water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/panel[1]/div/div/button[1]')
+        actions.move_to_element(water).click().perform()
+    else:
+        PP = {1:884, 2:885, 3:913, 4:914, 5:915, 6:916, 7:917, 8:918, 9:919, 10:920, 11:921, 12:922, 13:923, 14:924, 15:925, 16:857, 17:858, 24:889, 25:890, 26:891, 27:892, 28:893, 30:933, 31:934, 32:935, 33:936, 34:937, 35:938, 36:939, 37:940, }
+        driver.get('https://vle.mathswatch.co.uk/vle/stat')
 
 #Current total points from running all the code as of 07/06/23
 #Primary: 1523
