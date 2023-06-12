@@ -25,7 +25,7 @@ def GettoPage():
         actions.move_to_element(water).click().perform()
     else:
         PP = {1:884, 2:885, 3:913, 4:914, 5:915, 6:916, 7:917, 8:918, 9:919, 10:920, 11:921, 12:922, 13:923, 14:924, 15:925, 16:857, 17:858, 24:889, 25:890, 26:891, 27:892, 28:893, 30:933, 31:934, 32:935, 33:936, 34:937, 35:938, 36:939, 37:940, 38:941, 39:942, 40:943, 41:944, 42:945, 43:946, 44:947, 45:830, 46:831, 47:832, 48:833, 49:834, 
-                50:835, 51:836, 52:837, 53:838, 54:839, 55:840, 56:841, 57:842, 58:843, 59:844, 60:845, 61:847, 62:848, 63:849, 64:850, 65:852, 66:853, 67:654, 68:855}
+                50:835, 51:836, 52:837, 53:838, 54:839, 55:840, 56:841, 57:842, 58:843, 59:844, 60:845, 61:846, 62:847, 63:848, 64:849, 65:850, 66:851, 67:652, 68:853, 69:854, 70:855, 71:867, 72:868, 73:869, 74:970, 75:871, 76:872, 77:873, 78:874, 79:875, 80:876, 81:877, 82:878, 83:879, 84:880}
         driver.get('https://vle.mathswatch.co.uk/vle/stat')
 
 #Current total points from running all the code as of 07/06/23
@@ -37,6 +37,7 @@ def GettoPage():
     #Finish all/most of the questions
     #Log in properly with Username and Password ./ COMPLETE!
     #Make a GUI then make it headless
+    #Make a script that will go through the 
     #Allow people with smaller screens by loading the website again but changing the URL to the next question as each question has a unique URL
     #Test whether you could have two different windows each doing a different half of the work. Doubling the speed.
     #Make it MultiFile to make myself look like a competent programmer ./ Success!
