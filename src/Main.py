@@ -6,10 +6,9 @@ from Driver import Select
 import Layouts as L
 #Everything is imported from Driver so that only 1 instance of Selenium is created
 #The current set of questions being worked on is 100
-i=19
+i=1
 delay = 0.5
-SmallPP=1
-
+SmallPP=0
 
 def GettoPage():
     if SmallPP != 1:
@@ -25,8 +24,8 @@ def GettoPage():
         actions.move_to_element(water).click().perform()
     else:
         PP = {1:884, 2:885, 3:913, 4:914, 5:915, 6:916, 7:917, 8:918, 9:919, 10:920, 11:921, 12:922, 13:923, 14:924, 15:925, 16:857, 17:858, 24:889, 25:890, 26:891, 27:892, 28:893, 30:933, 31:934, 32:935, 33:936, 34:937, 35:938, 36:939, 37:940, 38:941, 39:942, 40:943, 41:944, 42:945, 43:946, 44:947, 45:830, 46:831, 47:832, 48:833, 49:834, 
-                50:835, 51:836, 52:837, 53:838, 54:839, 55:840, 56:841, 57:842, 58:843, 59:844, 60:845, 61:846, 62:847, 63:848, 64:849, 65:850, 66:851, 67:652, 68:853, 69:854, 70:855, 71:867, 72:868, 73:869, 74:970, 75:871, 76:872, 77:873, 78:874, 79:875, 80:876, 81:877, 82:878, 83:879, 84:880}
-        driver.get('https://vle.mathswatch.co.uk/vle/stat')
+                50:835, 51:836, 52:837, 53:838, 54:839, 55:840, 56:841, 57:842, 58:843, 59:844, 60:845, 61:846, 62:847, 63:848, 64:849, 65:850, 66:851, 67:652, 68:853, 69:854, 70:855, 71:874, 72:875, 73:867, 74:868, 75:878, 76:869, 77:880, 78:881, 79:882, 80:876, 81:877, 82:878, 83:879, 84:880, }
+        driver.get('https://vle.mathswatch.co.uk/vle/browse/' + str(PP[i]) +'/practice/1')
 
 #Current total points from running all the code as of 07/06/23
 #Primary: 1523
@@ -131,8 +130,7 @@ def FormulaInWords():
         L.SymLongBox(9, 'H1')
         L.SymLongBox(1.5, 'H2')
         L.SymLongBox(11)
-    except:
-        print("3rr0r", i)
+    
     finally:
         i+=1
         GettoPage()
@@ -1054,7 +1052,7 @@ def PropsofQuads():
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[3]/div[1]/ul/li[5]/a')
         actions.click(water).perform()
 
-        L.divinput2("D", "L4", "C", "paralell")
+        L.divinput2("D", "L4", "B", "paralell")
 
         water = driver.find_element(by=By.XPATH, value='/html/body/app/main/div[2]/routehandler/div/div[1]/div/panel/div/div[4]/div/div[2]/answer/div/formhorizontal/form/div[1]/div/subtag/div/div/div/div[1]/div')
         actions.click(water).perform()
@@ -4728,7 +4726,7 @@ def Primary():
     if MakeLog == 1:
         sys.stdout.close()
 
-# Primary()
+Primary()
 
 
 ##### Template for functions #####
