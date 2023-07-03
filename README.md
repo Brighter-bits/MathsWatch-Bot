@@ -1,4 +1,6 @@
 # MathsWatch-Bot
+Deprecated: No longer works multiple times as you can no longer answer the same question more than once. As such development for this project has COMPLETELY STOPPED unless I find a different method.
+
 A Bot which completes questions in the "my progress" tab for MathsWatch, allowing you to get enough points to get first on the leaderboards.
 
 It can currently get 1532 total points as of 07/06/23 and takes ~26 minutes to fully complete
