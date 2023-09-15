@@ -1,5 +1,5 @@
 # MathsWatch-Bot
-Deprecated: No longer works multiple times as you can no longer answer the same question more than once. As such development for this project has COMPLETELY STOPPED unless I find a different method.
+Technically no longer deprecated: However, I will most likely not be updating as I have this thing called revision I have to do.
 
 A Bot which completes questions in the "my progress" tab for MathsWatch, allowing you to get enough points to get first on the leaderboards.
 
